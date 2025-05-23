@@ -64,6 +64,18 @@
         <TokenTransfer :wallet-info="hdWallet" />
       </div>
     </div>
+    
+    <!-- ERC20 代幣管理模塊 -->
+    <div class="wallet-module">
+      <div class="wallet-module-header">
+        <h2>5. ERC20 代幣管理</h2>
+        <p class="module-description">查詢ERC20代幣餘額並進行轉帳</p>
+      </div>
+      
+      <div class="wallet-section">
+        <ERC20Manager :wallet-info="hdWallet" />
+      </div>
+    </div>
   </div>
 </template>
 
@@ -73,6 +85,7 @@ import MnemonicGenerator from '@/components/wallet/MnemonicGenerator.vue'
 import HDWalletGenerator from '@/components/wallet/HDWalletGenerator.vue'
 import BalanceChecker from '@/components/wallet/BalanceChecker.vue'
 import TokenTransfer from '@/components/wallet/TokenTransfer.vue'
+import ERC20Manager from '@/components/wallet/ERC20Manager.vue'
 
 // 助記詞狀態
 const currentMnemonic = ref('')
